@@ -1,0 +1,21 @@
+service: renovation-api
+frameworkVersion: '3'
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: development
+  region: us-east-1
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'

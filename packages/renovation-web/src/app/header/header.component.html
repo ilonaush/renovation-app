@@ -1,0 +1,6 @@
+<mat-toolbar color="accent">
+    <span class="app-title">Renovation</span>
+    <mat-nav-list>
+        <a matListItemTitle *ngFor="let link of links" href="{{link.path}}" class="nav-link">{{link.title}}</a>
+    </mat-nav-list>
+</mat-toolbar>
